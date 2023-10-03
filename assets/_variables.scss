@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Rubik:wght@300;400;500;600;700&display=swap");
+
+:root {
+	// Fonts
+	--heading-font: "Rubik", sans-serif;
+	--body-font: "Open Sans", sans-serif;
+
+	//Colors
+	--heading: 0 2% 22%;
+	--body: 0 2% 20%;
+	--border: 0 0% 90%;
+
+	// Base Color Shade
+	--base-h: 31;
+	--base-s: 93%;
+	--base-l: 55%;
+	--base: var(--base-h) var(--base-s) var(--base-l);
+	--base-100: var(--base-h) var(--base-s) calc(var(--base-l) + 20%);
+	--base-200: var(--base-h) var(--base-s) calc(var(--base-l) + 15%);
+	--base-300: var(--base-h) var(--base-s) calc(var(--base-l) + 10%);
+	--base-400: var(--base-h) var(--base-s) calc(var(--base-l) + 5%);
+	--base-600: var(--base-h) var(--base-s) calc(var(--base-l) - 8%);
+	--base-700: var(--base-h) var(--base-s) calc(var(--base-l) - 10%);
+	--base-800: var(--base-h) var(--base-s) calc(var(--base-l) - 15%);
+	--base-900: var(--base-h) var(--base-s) calc(var(--base-l) - 20%);
+
+	// Accent Color Shade
+	--accent-h: 260;
+	--accent-s: 92%;
+	--accent-l: 10%;
+	--accent: var(--accent-h) var(--accent-s) var(--accent-l);
+
+	// Light Color Shade
+	--light-h: 148;
+	--light-s: 0%;
+	--light-l: 95%;
+	--light: var(--light-h) var(--light-s) var(--light-l);
+
+	// Fixed Colors
+	--primary: 209 98% 32%;
+	--secondary: 210 7% 56%;
+	--success: 147 67% 47%;
+	--danger: 360 78% 62%;
+	--warning: 29 100% 63%;
+	--info: 200 90% 53%;
+	--dark: 206 70% 11%;
+	--white: 0 0% 100%;
+}

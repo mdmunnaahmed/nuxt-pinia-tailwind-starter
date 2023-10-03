@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Additional Elements
+@import "_variables.scss";
+@import "_global.scss";
+@import "_color.scss";
+@import "_bg.scss";
+@import "_mixins.scss";
+@import "_extend.scss";
