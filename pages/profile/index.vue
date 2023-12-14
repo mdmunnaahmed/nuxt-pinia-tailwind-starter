@@ -1,11 +1,16 @@
 <template>
   <div>
     <!-- {{ user.email }} -->
-    <button @click="logout" class="btn bg-gray-800 text-white px-5 py-2">logout</button>
+    <button @click="logout" class="btn bg-gray-800 text-white px-5 py-2">
+      logout
+    </button>
   </div>
 </template>
 
 <script setup>
+definePageMeta({
+  middleware: "auth",
+});
 const user = useSupabaseUser();
 const client = useSupabaseClient();
 const router = useRouter();

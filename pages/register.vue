@@ -29,6 +29,9 @@
 </template>
 
 <script setup>
+definePageMeta({
+  middleware: "auth",
+});
 const client = useSupabaseClient();
 const email = ref("");
 const password = ref(null);
