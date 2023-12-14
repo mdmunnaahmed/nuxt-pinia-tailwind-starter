@@ -7,4 +7,7 @@ export default defineNuxtConfig({
     { src: "~/assets/_extend.scss", lang: "scss" },
     { src: "~/assets/main.scss", lang: "scss" },
   ],
+  supabase: {
+    redirect: false
+  }
 });

@@ -8,10 +8,13 @@
               <NuxtLink class="menu-link" to="/">Home</NuxtLink>
             </li>
             <li class="menu-item">
-              <NuxtLink class="menu-link" to="/about">About</NuxtLink>
+              <NuxtLink class="menu-link" to="/register">Register</NuxtLink>
             </li>
             <li class="menu-item">
-              <NuxtLink class="menu-link" to="/blog">Blog</NuxtLink>
+              <NuxtLink class="menu-link" to="/login">Login</NuxtLink>
+            </li>
+            <li class="menu-item">
+              <NuxtLink class="menu-link" to="/profile">Profile</NuxtLink>
             </li>
           </ul>
         </div>
