@@ -11,17 +11,21 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtbase/auth-ui-vue": "^0.3.5",
     "@nuxtjs/style-resources": "^1.2.1",
     "@nuxtjs/supabase": "^1.1.4",
+    "@nuxtjs/tailwindcss": "^6.10.1",
+    "@supabase/auth-ui-shared": "^0.1.8",
     "node-sass": "^9.0.0",
     "nuxt": "^3.7.4",
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
+    "shadcn-nuxt": "^0.1.0",
+    "typescript": "^5.3.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.4.11",
     "pinia": "^2.1.6"
   }

@@ -1,5 +1,6 @@
 <template>
   <div class="container mx-auto mt-10">
+    <Auth />
     <form @submit.prevent="signUp" class="flex flex-col gap-4 sm:w-1/3 mx-auto">
       <input
         class="border py-2 px-3"

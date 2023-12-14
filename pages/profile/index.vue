@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <!-- {{ user.email }} -->
+  <div class="text-center pt-5">
     <button @click="logout" class="btn bg-gray-800 text-white px-5 py-2">
       logout
     </button>

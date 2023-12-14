@@ -1,0 +1,15 @@
+{
+  "style": "default",
+  "typescript": false,
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "assets/",
+    "baseColor": "slate",
+    "cssVariables": true
+  },
+  "framework": "nuxt",
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  }
+}
