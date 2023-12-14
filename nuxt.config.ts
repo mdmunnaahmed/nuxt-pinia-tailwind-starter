@@ -1,8 +1,6 @@
 export default defineNuxtConfig({
-  modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss"],
-  pinia: {
-    autoImports: ["defineStore", ["defineStore", "definePiniaStore"]],
-  },
+  modules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", '@nuxtjs/supabase'],
+  pinia: { autoImports: ["defineStore", ["defineStore", "definePiniaStore"]] },
   // css: ["@/assets/main.scss"],
   css: [
     { src: "~/assets/_mixins.scss", lang: "scss" },
