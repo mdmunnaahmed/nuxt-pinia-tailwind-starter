@@ -1,12 +1,21 @@
 <template>
   <div class="text-center pt-5">
-    <button @click="logout" class="btn bg-gray-800 text-white px-5 py-2">
+    <div
+      class="p-5 shadow-lg rounded-xl border border-gray-400 max-w-[520px] mx-auto mb-5"
+    >
+      <p>Last login at: {{ formattedDate(user.last_sign_in_at) }}</p>
+      <p>{{ user.email }}</p>
+    </div>
+    <button @click="logout" class="btn bg-gray-700 hover:bg-gray-900 text-white px-5 py-2">
       logout
     </button>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
+import { format } from "date-fns";
+
 definePageMeta({
   middleware: "auth",
 });
@@ -14,6 +23,7 @@ const user = useSupabaseUser();
 const client = useSupabaseClient();
 const router = useRouter();
 const error = ref(null);
+console.log(user.email);
 async function logout() {
   try {
     const { error } = await client.auth.signOut();
@@ -23,7 +33,9 @@ async function logout() {
     error.value = error.message;
   }
 }
-</script>
 
-<style lang="scss" scoped>
-</style>
+const formattedDate = (timestamp) => {
+  const date = new Date(timestamp);
+  return format(date, "h:mma 'at' dd MMM yyyy");
+};
+</script>

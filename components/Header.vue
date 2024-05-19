@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header py-3 bg-gray-200">
-      <div class="header-bottom mt-lg-5">
+      <div class="header-bottom">
         <div class="flex justify-center items-center">
           <ul class="menu">
             <li class="menu-item">

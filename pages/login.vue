@@ -7,13 +7,20 @@
         placeholder="email"
         v-model="email"
       />
-      <input
-        class="border py-2 px-3"
-        type="password"
-        placeholder="password"
-        v-model="password"
-      />
-      <button class="btn bg-green-600 py-2 hover:bg-green-700">Login</button>
+      <div class="relative">
+        <input
+          class="border py-2 px-3"
+          placeholder="password"
+          v-model="password"
+          :type="isPasswordVisible ? 'text' : 'password'"
+        />
+        <span
+          class="absolute right-3 top-[18px] cursor-pointer z-10"
+          @click="togglePasswordVisibility"
+          >{{ isPasswordVisible ? "hide" : "show" }}</span
+        >
+      </div>
+      <button class="btn bg-green-600 py-2 hover:bg-green-700 font-bold text-white">Login</button>
       <small class="text-red-600 font-medium" v-if="errMsg && !succMsg">{{
         errMsg
       }}</small>
@@ -25,15 +32,22 @@
 </template>
 
 <script setup>
+// Create a reactive variable to track the password visibility state
+const isPasswordVisible = ref(false);
+
+// Method to toggle the password visibility
+const togglePasswordVisibility = () => {
+  isPasswordVisible.value = !isPasswordVisible.value;
+};
+
 definePageMeta({
   middleware: "auth",
 });
 const client = useSupabaseClient();
 const router = useRouter();
-console.log(client);
 
-const email = ref(null);
-const password = ref(null);
+const email = ref('msdmunna77@gmail.com');
+const password = ref('username');
 const errMsg = ref(null);
 const succMsg = ref(null);
 async function signIn() {
@@ -50,6 +64,3 @@ async function signIn() {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

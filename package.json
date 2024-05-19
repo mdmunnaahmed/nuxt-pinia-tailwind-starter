@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
-    "pinia": "^2.1.6"
+    "date-fns": "^3.6.0",
+    "pinia": "^2.1.6",
+    "raq": "^0.0.0"
   }
 }
