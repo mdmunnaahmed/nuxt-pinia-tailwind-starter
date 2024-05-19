@@ -13,8 +13,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import { format } from "date-fns";
+import { useFormattedDate } from '../../composables/useFormattedDate';
 
 definePageMeta({
   middleware: "auth",
@@ -34,8 +33,5 @@ async function logout() {
   }
 }
 
-const formattedDate = (timestamp) => {
-  const date = new Date(timestamp);
-  return format(date, "h:mma 'at' dd MMM yyyy");
-};
+const { formattedDate } = useFormattedDate();
 </script>
