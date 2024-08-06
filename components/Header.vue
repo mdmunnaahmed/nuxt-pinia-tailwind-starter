@@ -7,14 +7,14 @@
             <li class="menu-item">
               <NuxtLink class="menu-link" to="/">Home</NuxtLink>
             </li>
-            <li class="menu-item" v-if="!user">
-              <NuxtLink class="menu-link" to="/register">Register</NuxtLink>
+            <li class="menu-item">
+              <NuxtLink class="menu-link" to="">Register</NuxtLink>
             </li>
-            <li class="menu-item" v-if="!user">
-              <NuxtLink class="menu-link" to="/login">Login</NuxtLink>
+            <li class="menu-item">
+              <NuxtLink class="menu-link" to="">Login</NuxtLink>
             </li>
-            <li class="menu-item" v-if="!!user">
-              <NuxtLink class="menu-link" to="/profile">Profile</NuxtLink>
+            <li class="menu-item">
+              <NuxtLink class="menu-link" to="">Profile</NuxtLink>
             </li>
           </ul>
         </div>
@@ -22,20 +22,6 @@
     </div>
   </div>
 </template>
-
-<script>
-import { useAuthStore } from "~/stores/authStore";
-export default {
-  setup() {
-    const authStore = useAuthStore();
-    const user = useSupabaseUser();
-    return {
-      authStore,
-      user,
-    };
-  },
-};
-</script>
 
 <style lang="scss" scoped>
 @import "@/assets/_mixins.scss";
